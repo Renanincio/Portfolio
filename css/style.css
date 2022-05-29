@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+header{
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    padding: .8em;
+    justify-content: space-between;
+}
+
+#btn-mobile{
+    border: solid white .8px;
+    background-color: transparent;
+    color: white;
+    border-radius: .5em;
+}
+
+#menu{
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    margin: -300px 0 0 0;
+    padding: 0;
+    transition-duration: 1s;
+}
+
+#menu a{
+    color: white;
+    text-decoration: none;
+}
+
+#menu li:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#menu li{
+    padding: 1em;
+}
+
+#nav.active #menu{
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+
+.top-content{
+    font-family: arial, sans-serif;
+    background: url(../Background/2560x1440-minimal-abstract-background_1602345560.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 47em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.texto{
+    padding: 0 3em;
+}
+
+.texto p abbr{
+    text-decoration: none;
+}
+
+.img{
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+}
+
+.middle-content{
+    padding: 2em 0;
+    margin: 0;
+    text-align: center;
+    color: #a09292;
+    display: grid;
+    background-color: rgb(255, 241, 241);
+}
+
+.middle-content div{
+    margin: 2em auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 19em;
+    width: 14em;
+    border-radius: 2em;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
+    transition-duration: 1s;
+}
+
+.middle-content div:hover{
+    transform: scale(1.15);
+    background-color: white;
+    height: 23em;
+}
+
+.middle-content div:hover h1{
+    opacity: 1;
+    visibility: visible;
+}
+
+.middle-content div h1:hover{
+    color: green;
+    background: transparent;
+}
+
+.div-content p{
+    font-size: 5em;
+    color: #a09292;
+}
+
+.div-content h1{
+    display: inline-block;
+    color: white;
+    font-size: 1.7em;
+    font-weight: normal;
+    background-color: green;
+    width: 5em;
+    padding: .4em;
+    border-radius: 1em;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid green;
+    transition-duration: 1s;
+}
+
+.div-content h1 abbr{
+    text-decoration: none;
+}
+
+.footer{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    border: none;
+}
+
+.form label{
+    text-align: left;
+    margin: 1em 1em 0;
+}
+
+.form input{
+    margin: 1em;
+    border-radius: 1em;
+    padding: .4em;
+}
+
+#mensagem{
+    margin: 1em;
+    height: 6em;
+    border-radius: 1em;
+    padding: .4em;
+}
+
+.enviar{
+    margin: 1em;
+    background-color: green;
+    width: 5em;
+    padding: .4em;
+    border-radius: 1em;
+    text-align: center;
+    color: white;
+}
+
+.footer-menushare{
+    padding: 0;
+    margin: 0 1em;
+    text-align: end;
+    list-style: none;
+}
+
+.footer-menushare li a{
+    font-size: 1.4em;
+    color: white;
+    margin-bottom: .5em;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 48.7em){
+    
+    .top-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 34em;
+        padding-top: 5em;
+    }
+    
+    .texto{
+        padding: 0 1em;
+    }
+
+    .img{
+        height: 17em;
+        width: 17em;
+        padding: 5em 0;
+    }
+    
+    .middle-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .middle-h1{
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (min-width: 64em){
+
+    header{
+        justify-content: flex-end;
+    }
+    
+    #btn-mobile{
+        display: none;
+    }
+
+    #menu{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        margin: 0 1em 0 0;
+    }
+    
+    #menu li{
+        margin-right: 1.5em;
+    }
+    
+    #menu a{
+        letter-spacing: .3em;
+    }
+
+ 
+    .top-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 29em;
+        padding-top: 10em;
+    }
+    
+    .texto{
+        padding: 0 3em;
+    }
+
+    
+    .img{
+        height: 20em;
+        width: 20em;
+        padding: 0;
+    }
+    
+    .middle-content{
+        grid-template-columns: repeat(4, 1fr);
+        padding: 5em 1em;
+    }
+     
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-menushare{
+        margin: auto 1em;
+        font-size: 1.2em;
+    }
+    
+    .hr{
+        display: none;
+    }
+    
+    .copyright{
+        grid-column: 1 / -1;
+    }
+}
