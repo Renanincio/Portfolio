@@ -49,7 +49,7 @@ header{
     background-size: cover;
     text-align: center;
     color: white;
-    height: 49em;
+    height: 54em;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 }
@@ -184,6 +184,12 @@ header{
     color: white;
     margin-bottom: .5em;
     text-decoration: none;
+}
+
+@media screen and (min-width:396px) {
+    .top-content{
+        height: 47em;
+    }
 }
 
 @media screen and (min-width: 48.7em){
